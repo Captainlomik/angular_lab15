@@ -1,0 +1,32 @@
+{
+  "person": [
+    {
+      "name": "lol",
+      "surname": "kek",
+      "phone": "+7(966) 767-64-56",
+      "email": "lol@mail.ru",
+      "id": 2
+    },
+    {
+      "name": "Вася",
+      "surname": "Петров",
+      "phone": "+7(966) 767-64-54",
+      "email": "vasya@mail.ru",
+      "id": 3
+    },
+    {
+      "name": "kll",
+      "surname": "dsdsd",
+      "phone": "+7(323) 232-2322",
+      "email": "dfdfdjh@jhdjs.ds",
+      "id": 5
+    },
+    {
+      "name": "brrr",
+      "surname": "brrr",
+      "phone": "+7(687) 686-7868",
+      "email": "lololol@lol.lo",
+      "id": 7
+    }
+  ]
+}

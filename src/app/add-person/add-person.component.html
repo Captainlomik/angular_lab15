@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <div class="col-5">
+    <form [formGroup]="addForm" novalidate (ngSubmit)="onAddPerson()">
+      <div class="col-12 ">
+        <input type="text" class="form-control" placeholder="name" required formControlName="name">
+      </div>
+      <div class="col-12 mt-2">
+        <input type="text" class="form-control" placeholder="surname" required formControlName="surname">
+      </div>
+      <div class="col-12 mt-2 form-group">
+        <input type="text" class="form-control" [textMask]='{mask:phonemask}' placeholder="phone" required formControlName="phone">
+ <!--<div class="alert-danger" *ngIf="myForm.controls['phone'].invalid && myForm.controls['phone'].touched">
+          Некорректный номер телефона
+        </div>-->
+      </div>
+      <div class="col-12 mt-2 form-group">
+        <input type="text" class="form-control"  placeholder="email"  email formControlName="email">
+      </div>
+      <div class="col-12 mt-2 form-group">
+        <button class="btn btn-primary" [disabled]="addForm.invalid">
+          Сохранить</button>
+      </div>
+    </form>
+
+  </div>
+</div>

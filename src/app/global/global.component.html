@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="col-13 mt-4 mb-3">
+    <input type="text" class="form-control" placeholder="Поиск" [(ngModel)]="value" value="LOL" >
+  </div></div>
+  
+
+  <app-view-person [inPerson]="person" *ngFor="let person of persons |search:value; let pindex = index;"
+    (del)="delete(person, pindex)" (ch)="change($event)">
+  </app-view-person> 
+ 
+  

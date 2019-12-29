@@ -1,0 +1,33 @@
+<div class="container" *ngIf="editMode === false; else elseBlock">
+  
+  <div class="row mt-1 " >
+     <a [routerLink]="[ '/info', inPerson.id]"> <div class="col-3">{{inPerson.id}}</div> </a>
+      <div class="col-2 ">{{inPerson.name}}</div>
+      <div class="col-2">{{inPerson.surname}}</div> 
+      <div class="col-2">{{inPerson.phone}}</div> 
+        <button class=" btn btn-light"
+        (click)="editMode=!editMode">
+        Change</button>
+      <button type="button" (click)="delete()"  class="btn btn-danger ml-3">Del</button>
+       </div>
+</div>
+
+<ng-template #elseBlock>
+<div class="container" >
+  <div class="row pt-2">
+    <div class="col-1">{{inPerson.id}}</div>
+        <div class="col-2"><input type="text" [(ngModel)]="inPerson.name"></div>
+        <div class="col-2"><input type="text" [(ngModel)]="inPerson.surname"></div>
+       <div class="col-2"><input type="text"  [(ngModel)]="inPerson.phone"></div>
+        <button class=" btn btn-light ml-5"
+          (click)="editMode=!editMode">
+          Change</button>
+        <button class=" btn btn-light ml-2"
+          (click)="onSave()">
+          Save</button>
+        <button type="button" (click)="delete()"  class="btn btn-danger ml-3">Del</button>
+         
+  </div>
+</div>
+</ng-template>  
+
